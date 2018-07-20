@@ -1,4 +1,8 @@
-$('document').ready(function(){
+$(window).on('load', function () {
+    $('.loader').delay(2000).fadeOut('slow');
+});
+
+$(document).ready(function(){
 	// show overlay contact form
 	$('.feedback').on('click', function(){
 		$('.popup-form').fadeIn(500);

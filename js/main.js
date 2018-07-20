@@ -1,10 +1,15 @@
 $('document').ready(function(){
+	// show overlay contact form
 	$('.feedback').on('click', function(){
 		$('.popup-form').fadeIn(500);
 	});
+
+	// open submenu
 	$('.catalog>li>a').on('click', function(){
 		$(this).parent('li').children('.submenu').toggleClass('submenu-active');
 
+		// change product`s section via link
+		// like Главная/Каталог/Автомобили
 		var category = $(this).attr('name');
 		var categoryName = $('#catalog-position');
 		switch(category){
@@ -28,11 +33,16 @@ $('document').ready(function(){
 				break;
 		}
 	});
+
+	// underline active link of submenu
 	$('.catalog>li>a').on('click', function(){
 		$(this).toggleClass("li-active");
 	});
-	$('.submenu li a').on('click', function(){
-		$('.products').addClass('products-show');
-		$('.products').removeClass('products');
-	});
+
+	//show product content, when you click on link of category
+	// I comented it, because I didn`t know about need of these feature
+	// $('.submenu li a').on('click', function(){
+	// 	$('.products').addClass('products-show');
+	// 	$('.products').removeClass('products');
+	// });
 })

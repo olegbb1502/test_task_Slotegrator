@@ -1,8 +1,27 @@
 *{
 	margin: 0;
-	padding: 0;
 }
 
 .popup-form{
 	display:none;
+}
+
+.submenu{
+	display:none;
+}
+
+.submenu-active{
+	display: block;
+}
+
+.li-active, .sucategory-active{
+	border-bottom: 2px dashed #000;
+}
+
+.products{
+	display: none;
+}
+
+.products-show{
+	display: flex;
 }

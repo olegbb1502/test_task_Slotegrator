@@ -7,18 +7,190 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
 	<div class="full-wrapper">
 		<header>
-			
+			<div class="logo">
+				<img src="img/logo.png" alt="logo">
+			</div>
+			<div class="left-block">
+				<div class="telephones">
+					<a href="tel:+74997777777">+7(499) 777-77-77</a>
+					<a href="tel:+74997777777">+7(499) 777-77-77</a>
+				</div>
+				<a href="#" class="feedback">Обратная связь</a>
+			</div>
 		</header>
+		<div class="popup-form">
+			<div class="layout"></div>
+			<div class="form">
+				<h2>Обратная связь</h2>
+				<form class="contact-form">
+					<label for="name">Ваше имя*</label>
+					<input type="text" id="name" required>
+					<label for="phone">Телефон*</label>
+					<input type="tel" id="phone" required>
+					<label for="mail">Email</label>
+					<input type="email" id="mail" required>
+					<label for="text">Сообщение</label>
+					<input type="textarea" id="text">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
 		<div class="main-content">
-			
+			<nav class="nav">
+				<ul class="menu-list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Прайс-лист</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="slider">
+				
+			</div>
+			<div class="katalog">
+				<div id="location">
+					<a href="#">Главная</a><span>/</span>
+					<a href="#">Каталог</a><span>/</span>
+					<a href="#" id="catalog-position">Бытовая техника</a><span></span>
+				</div>
+				<div class="left-bar">
+						<ul class="catalog">
+						    <li><a href=# name="cars">Автомобили</a>
+						        <ul class="submenu">
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						        </ul>
+						    </li>
+						    <li><a href=# name="technic" class="li-active">Бытовая техника</a>
+						        <ul class="submenu-active">
+						            <li><a href=# class="sucategory-active">Микроволновки</a></li>
+						            <li><a href=#>Холодильники</a></li>
+						            <li><a href=#>Посудомоечные машины</a></li>
+						            <li><a href=#>Чайники</a></li>
+						        </ul>
+						    </li>
+						    <li><a href=# name="mobile">Мобильная техника</a>
+						        <ul class="submenu">
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						        </ul>
+						    </li>
+						    <li><a href=# name="computers">Компьютеры</a>
+						        <ul class="submenu">
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						        </ul>
+						    </li>
+						    <li><a href=# name="dress">Одежда</a>
+						        <ul class="submenu">
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						        </ul>
+						    </li>
+						    <li><a href=# name="area">Недвижимость</a>
+						        <ul class="submenu">
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						            <li><a href=#>Подкатегория</a></li>
+						        </ul>
+						    </li>
+						</ul>
+				</div>
+				<div class="center-bar">
+					<ul class="products-show">
+						<li>
+							<img src="img/sink.jpg" alt="sink">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sapiente atque quos.</p>
+							<div class="price">
+								<h3>1 900p.</h3>
+								<i class="fas fa-cart-arrow-down"></i>
+							</div>
+						</li>
+						<li>
+							<img src="img/fredge.jpeg" alt="fredge">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sapiente atque quos.</p>
+							<div class="price">
+								<h3>1 900p.</h3>
+								<i class="fas fa-cart-arrow-down"></i>
+							</div>
+						</li>
+						<li>
+							<img src="img/microwave.jpg" alt="microwave">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sapiente atque quos.</p>
+							<div class="price">
+								<h3>1 900p.</h3>
+								<i class="fas fa-cart-arrow-down"></i>
+							</div>
+						</li>
+						<li>
+							<img src="img/blender.jpg" alt="blender">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sapiente atque quos.</p>
+							<div class="price">
+								<h3>1 900p.</h3>
+								<i class="fas fa-cart-arrow-down"></i>
+							</div>
+						</li>
+						<li>
+							<img src="img/oven.jpeg" alt="oven">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sapiente atque quos.</p>
+							<div class="price">
+								<h3>1 900p.</h3>
+								<i class="fas fa-cart-arrow-down"></i>
+							</div>
+						</li>
+					</ul>
+					<div class="counter">
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li class="active-page">3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+						</ul>
+					</div>
+					<div class="underline"></div>
+					<div class="text-area">
+						<div class="text1">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repudiandae corrupti accusamus doloribus ex incidunt eum, et consectetur vel nisi suscipit numquam recusandae, quo odio facilis doloremque in quaerat totam!</p>
+						</div>
+						<div class="text2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nemo, sint vitae. Cupiditate tempore, enim pariatur, nobis possimus mollitia! Reiciendis et veniam quia eum tenetur, facilis quae nostrum cupiditate ad.Quasi consectetur nobis corporis aliquid, delectus aliquam soluta dolore itaque molestias iste eius quibusdam. Earum alias incidunt repellat, architecto odit cumque omnis, ad necessitatibus sed illum quam sequi, eligendi veritatis!</p></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<footer>
-			
+			<div class="footer-content">
+				<div class="col1">
+					<p>@ 2012-2013 ЗАО «Компания»</br>info@mail.ru</p>
+				</div>
+				<div class="col2">
+					<ul class="menu-list">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Прайс-лист</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="col3">
+					<img src="img/pixel.png" alt="pixel">
+					<p><a href="#">Разработка сайта</a> - </br>компания "Пиксель Плюс"</p>
+				</div>
+			</div>
 		</footer>
 	</div>
 </body>

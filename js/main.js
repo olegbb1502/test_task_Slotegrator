@@ -53,21 +53,53 @@ $(document).ready(function(){
 	// 	$('.products').addClass('products-show');
 	// 	$('.products').removeClass('products');
 	// });
+    var speed = 500; //transition speed - fade
+    var autoswitch = true; //auto slider options
+    var autoswitch_speed = 5000; //auto slider speed
 
-    $('.fadein img:gt(0)').hide();
-    $('.next').on('click', function () {
-        $('.fadein :first-child').fadeOut()
-            .next('img').fadeIn()
-            .end().appendTo('.fadein');
-    });
-    $('.prev').on('click', function () {
-        $('.fadein :first-child').fadeOut()
-            .prev('img').fadeIn()
-            .end().appendTo('.fadein');
-    });
-    setInterval(function(){
-            $('.fadein :first-child').fadeOut()
-                .next('img').fadeIn()
-                .end().appendTo('.fadein');},
-        4000);
+    // add first initial active class
+    $(".slide").first().addClass("active");
+
+    // hide all slides
+    $(".slide").hide;
+
+    // show only active class slide
+    $(".active").show();
+
+    // Next Event Handler
+    $('#next').on('click', nextSlide);// call function nextSlide
+
+    // Prev Event Handler
+    $('#prev').on('click', prevSlide);// call function prevSlide
+
+    // Auto Slider Handler
+    if(autoswitch == true){
+        setInterval(nextSlide,autoswitch_speed);// call function and value 4000
+    }
+
+    // Switch to next slide
+    function nextSlide(){
+        $('.active').removeClass('active').addClass('oldActive');
+        if($('.oldActive').is(':last-child')){
+            $('.slide').first().addClass('active');
+        } else {
+            $('.oldActive').next().addClass('active');
+        }
+        $('.oldActive').removeClass('oldActive');
+        $('.slide').fadeOut(speed);
+        $('.active').fadeIn(speed);
+    }
+
+    // Switch to prev slide
+    function prevSlide(){
+        $('.active').removeClass('active').addClass('oldActive');
+        if($('.oldActive').is(':first-child')){
+            $('.slide').last().addClass('active');
+        } else {
+            $('.oldActive').prev().addClass('active');
+        }
+        $('.oldActive').removeClass('oldActive');
+        $('.slide').fadeOut(speed);
+        $('.active').fadeIn(speed);
+    }
 })

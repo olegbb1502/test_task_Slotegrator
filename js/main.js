@@ -1,3 +1,4 @@
+//preloader
 $(window).on('load', function () {
     $('.loader').delay(2000).fadeOut('slow');
 });
@@ -7,6 +8,9 @@ $(document).ready(function(){
 	$('.feedback').on('click', function(){
 		$('.popup-form').fadeIn(500);
 	});
+	$('.close').on('click', function () {
+		$('.popup-form').fadeOut(500);
+    });
 
 	// open submenu
 	$('.catalog>li>a').on('click', function(){
@@ -49,4 +53,21 @@ $(document).ready(function(){
 	// 	$('.products').addClass('products-show');
 	// 	$('.products').removeClass('products');
 	// });
+
+    $('.fadein img:gt(0)').hide();
+    $('.next').on('click', function () {
+        $('.fadein :first-child').fadeOut()
+            .next('img').fadeIn()
+            .end().appendTo('.fadein');
+    });
+    $('.prev').on('click', function () {
+        $('.fadein :first-child').fadeOut()
+            .prev('img').fadeIn()
+            .end().appendTo('.fadein');
+    });
+    setInterval(function(){
+            $('.fadein :first-child').fadeOut()
+                .next('img').fadeIn()
+                .end().appendTo('.fadein');},
+        4000);
 })

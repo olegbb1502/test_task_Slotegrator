@@ -12,6 +12,31 @@ $(document).ready(function(){
 		$('.popup-form').fadeOut(500);
     });
 
+	//form validation
+
+    $('#form-submit').on('click', function () {
+        var name = $('#name').val();
+        var tel = $('#phone').val();
+        var isValidMail = ($('#mail').val().match(/.+?\@.+/g) || []).length===1;
+        if(name == ''){
+            $('#name').attr('placeholder','Поле обезательно для заполнения').css('border','2px solid red');
+        }
+        else {
+            $('#name').css('border','2px solid green');
+        }
+        if(tel == ''){
+            $('#phone').attr('placeholder','Поле обезательно для заполнения').css('border','2px solid red');
+        }
+        else $('#phone').css('border','2px solid green');
+        if(isValidMail){
+            $('#mail').css('border','2px solid green');
+        }
+        else $('#mail').attr('placeholder','Поле обезательно для заполнения').css('border','2px solid red');
+        if(name && tel && mail){
+            $('.success').html('Выполнено!');
+        }
+    })
+
 	// open submenu
 	$('.catalog>li>a').on('click', function(){
 		$(this).parent('li').children('.submenu').toggleClass('submenu-active');

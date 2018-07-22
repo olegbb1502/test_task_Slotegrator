@@ -12,6 +12,16 @@ $(document).ready(function(){
 		$('.popup-form').fadeOut(500);
     });
 
+    $(".menu-toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
+
+    $('.nav ul li a').on('click', function () {
+       $('nav ul').toggleClass('hidden');
+    });
+
 	//form validation
 
     $('#form-submit').on('click', function () {
@@ -80,7 +90,7 @@ $(document).ready(function(){
 	// });
     var speed = 500; //transition speed - fade
     var autoswitch = true; //auto slider options
-    var autoswitch_speed = 5000; //auto slider speed
+    var autoswitch_speed = 4000; //auto slider speed
 
     // add first initial active class
     $(".slide").first().addClass("active");

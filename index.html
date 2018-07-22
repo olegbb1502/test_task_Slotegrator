@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 
 	<link rel="stylesheet" href="css/main.css">
@@ -13,15 +14,15 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
-	<!--<div class="loader">-->
-	    <!--<div class="laoder-frame">-->
-	        <!--<img class="svg-loader" src="https://kyivstore.com/wp-content/uploads/2016/09/loader.svg" alt="circle-loader">-->
-	    <!--</div>-->
-	<!--</div>-->
+	<div class="loader">
+	    <div class="laoder-frame">
+	        <img class="svg-loader" src="https://kyivstore.com/wp-content/uploads/2016/09/loader.svg" alt="circle-loader">
+	    </div>
+	</div>
 	<div class="full-wrapper">
 		<header>
 			<div class="logo">
-				<img src="img/logo.png" alt="logo">
+				<a href="./"><img src="img/logo.png" alt="logo"></a>
 			</div>
 			<div class="left-block">
 				<div class="telephones">
@@ -33,8 +34,8 @@
 		</header>
 		<div class="popup-form">
 			<div class="layout"></div>
-			<a href="#" class="close"><i class="fas fa-times"></i></a>
 			<div class="form">
+				<a href="#" class="close"><i class="fas fa-times"></i></a>
 				<h2>Обратная связь</h2>
 				<form class="contact-form">
 					<label for="name">Ваше имя*</label>
@@ -44,7 +45,7 @@
 					<label for="mail">Email</label>
 					<input type="email" id="mail" required>
 					<label for="text">Сообщение</label>
-					<input type="textarea" id="text">
+					<textarea id="text" rows="4"></textarea>
 					<input type="submit" value="Отправить" id="form-submit">
 				</form>
 				<div class="success"></div>
@@ -52,7 +53,19 @@
 		</div>
 		<div class="main-content">
 			<nav class="nav">
+				<div class="menu-toggle">
+					<div class="one"></div>
+					<div class="two"></div>
+					<div class="three"></div>
+				</div>
 				<ul class="menu-list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Прайс-лист</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<ul role="navigation" class="hidden">
 					<li><a href="#">Главная</a></li>
 					<li><a href="#">Каталог</a></li>
 					<li><a href="#">Доставка и оплата</a></li>
@@ -85,12 +98,12 @@
 					</div>
 				</div>
 			</div>
+			<div id="location">
+				<a href="#">Главная</a><span>/</span>
+				<a href="#">Каталог</a><span>/</span>
+				<a href="#" id="catalog-position">Бытовая техника</a><span></span>
+			</div>
 			<div class="katalog">
-				<div id="location">
-					<a href="#">Главная</a><span>/</span>
-					<a href="#">Каталог</a><span>/</span>
-					<a href="#" id="catalog-position">Бытовая техника</a><span></span>
-				</div>
 				<div class="left-bar">
 						<ul class="catalog">
 						    <li><a href=# name="cars">Автомобили</a>
@@ -194,9 +207,9 @@
 					<div class="underline"></div>
 					<div class="text-area">
 						<div class="text1">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repudiandae corrupti accusamus doloribus ex incidunt eum, et consectetur vel nisi suscipit numquam recusandae, quo odio facilis doloremque in quaerat totam!</p>
+							<p>Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. </p>
 						</div>
-						<div class="text2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nemo, sint vitae. Cupiditate tempore, enim pariatur, nobis possimus mollitia! Reiciendis et veniam quia eum tenetur, facilis quae nostrum cupiditate ad.Quasi consectetur nobis corporis aliquid, delectus aliquam soluta dolore itaque molestias iste eius quibusdam. Earum alias incidunt repellat, architecto odit cumque omnis, ad necessitatibus sed illum quam sequi, eligendi veritatis!</p></div>
+						<div class="text2"><p>Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.</p></div>
 					</div>
 				</div>
 			</div>
